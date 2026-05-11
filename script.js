@@ -212,3 +212,32 @@ sendOrderBtn.addEventListener("click", () => {
   window.open(whatsappURL, "_blank");
 
 });
+
+/* CART TOGGLE */
+
+const floatingCartBtn =
+document.getElementById("floatingCartBtn");
+
+const cartSidebar =
+document.getElementById("cartSidebar");
+
+const minimizeCartBtn =
+document.getElementById("minimizeCartBtn");
+
+
+/* OPEN CART */
+
+floatingCartBtn.addEventListener("click", () => {
+
+  cartSidebar.classList.remove("minimized");
+
+});
+
+
+/* MINIMIZE CART */
+
+minimizeCartBtn.addEventListener("click", () => {
+
+  cartSidebar.classList.add("minimized");
+
+});
