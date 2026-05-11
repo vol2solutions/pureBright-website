@@ -1,0 +1,87 @@
+* {
+
+.table-header,
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 25px;
+}
+
+.table-header {
+  background: #0f7bdc;
+  color: white;
+  font-weight: 700;
+}
+
+.table-row:nth-child(even) {
+  background: #f4f8fb;
+}
+
+.delivery-note {
+  margin-top: 25px;
+  background: #dfffe5;
+  color: #0b6b2d;
+  padding: 20px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.contact {
+  background: linear-gradient(135deg, #0b1f4d, #0f7bdc);
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #07152f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
