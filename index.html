@@ -103,33 +103,26 @@
 
 
   <!-- CART -->
-  <aside class="cart-sidebar">
+  <div class="cart-items" id="cartItems"></div>
 
-    <div class="cart-header">
-      <h2>Your Cart</h2>
-      <span id="cartCount">0 Items</span>
+  <div class="cart-footer">
+
+    <div class="cart-total">
+      <span>Total</span>
+      <h3 id="cartTotal">R0</h3>
     </div>
 
-    <div class="cart-items" id="cartItems"></div>
+    <button class="checkout-btn" id="checkoutBtn">
+      Proceed To Checkout
+    </button>
 
-    <div class="cart-footer">
+    <p class="delivery-note">
+      🚚 Delivery charged separately depending on area/distance.
+    </p>
 
-      <div class="cart-total">
-        <span>Total</span>
-        <h3 id="cartTotal">R0</h3>
-      </div>
+  </div>
 
-      <button class="checkout-btn" id="checkoutBtn">
-        Proceed To Checkout
-      </button>
-
-      <p class="delivery-note">
-        🚚 Delivery charged separately depending on area/distance.
-      </p>
-
-    </div>
-
-  </aside>
+</aside>
 
 
   <!-- CHECKOUT MODAL -->
