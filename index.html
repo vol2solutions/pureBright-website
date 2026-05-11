@@ -1,75 +1,267 @@
+<!-- ========================= -->
+<!-- FILE: index.html -->
+<!-- ========================= -->
 <!DOCTYPE html>
-          <span>Product</span>
-          <span>Price</span>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PureBright Cleaning Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-circle">✨</div>
+
+      <div>
+        <h2>PureBright</h2>
+        <span>Cleaning Solutions</span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-btn" href="https://wa.me/27636119934" target="_blank">
+      WhatsApp Us
+    </a>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <div class="hero-text">
+        <p class="hero-tag">PREMIUM CLEANING PRODUCTS</p>
+
+        <h1>
+          CLEAN POWERFUL.
+          <span>EVERY TIME.</span>
+        </h1>
+
+        <p class="hero-description">
+          Affordable, high-quality cleaning products for homes,
+          businesses, offices and cleaning companies.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#products" class="primary-btn">
+            Shop Products
+          </a>
+
+          <a href="https://wa.me/27636119934" target="_blank" class="secondary-btn">
+            Contact Amy
+          </a>
         </div>
-
-        <div class="table-row"><span>Dishwasher</span><span>R70</span></div>
-        <div class="table-row"><span>Sta-Soft</span><span>R70</span></div>
-        <div class="table-row"><span>Jik</span><span>R70</span></div>
-        <div class="table-row"><span>All Purpose</span><span>R70</span></div>
-        <div class="table-row"><span>Laundry Liquid</span><span>R85</span></div>
-        <div class="table-row"><span>Handy Andy</span><span>R70</span></div>
-        <div class="table-row"><span>Thick Bleach</span><span>R70</span></div>
-        <div class="table-row"><span>Lavender</span><span>R70</span></div>
-        <div class="table-row"><span>Vanish Spot Remover</span><span>R85</span></div>
-        <div class="table-row"><span>Washing Powder (5L)</span><span>R85</span></div>
       </div>
 
-      <div class="delivery-note">
-        🚚 Delivery is available at an additional charge depending on the area/distance.
+      <div class="hero-card">
+        <h3>Bulk Orders Welcome</h3>
+
+        <p>
+          Delivery available at an additional charge depending
+          on your area and distance.
+        </p>
+
+        <div class="hero-badge">
+          🚚 Fast Delivery Available
+        </div>
       </div>
+
     </div>
   </section>
 
-  <section class="why-us">
-    <div class="container">
-      <div class="section-title">
-        <h2>Why Choose PureBright?</h2>
-      </div>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">✅</div>
-          <h3>High Quality</h3>
-          <p>Powerful formulas that deliver great results.</p>
-        </div>
+  <!-- PRODUCTS -->
+  <section class="products-section" id="products">
 
-        <div class="feature-card">
-          <div class="feature-icon">🚚</div>
-          <h3>Delivery Available</h3>
-          <p>Convenient delivery options available.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">💰</div>
-          <h3>Affordable Prices</h3>
-          <p>Excellent quality at competitive prices.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">🏢</div>
-          <h3>Bulk Orders</h3>
-          <p>Perfect for businesses and cleaning services.</p>
-        </div>
-      </div>
+    <div class="section-heading">
+      <p>OUR PRODUCTS</p>
+      <h2>Shop Cleaning Products</h2>
     </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+
   </section>
 
-  <section class="contact">
-    <div class="container">
-      <h2>Contact Amy</h2>
-      <p>Ready to place your order?</p>
 
-      <a href="https://wa.me/27636119934" target="_blank" class="contact-btn">
-        WhatsApp: +27 63 611 9934
-      </a>
+  <!-- CART -->
+  <aside class="cart-sidebar">
+
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <span id="cartCount">0 Items</span>
     </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <h3 id="cartTotal">R0</h3>
+      </div>
+
+      <button class="checkout-btn" id="checkoutBtn">
+        Proceed To Checkout
+      </button>
+
+      <p class="delivery-note">
+        🚚 Delivery charged separately depending on area/distance.
+      </p>
+
+    </div>
+
+  </aside>
+
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal" id="checkoutModal">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2>Complete Your Order</h2>
+
+        <button id="closeModal">
+          ✕
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="customerName" placeholder="Your name">
+      </div>
+
+      <div class="form-group">
+        <label>Area / Suburb</label>
+        <input type="text" id="customerArea" placeholder="Your area">
+      </div>
+
+      <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea id="customerNotes" placeholder="Optional notes"></textarea>
+      </div>
+
+      <button class="whatsapp-order-btn" id="sendOrderBtn">
+        Complete Order On WhatsApp
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- WHY US -->
+  <section class="features-section">
+
+    <div class="section-heading">
+      <p>WHY CHOOSE US</p>
+      <h2>Trusted Cleaning Solutions</h2>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3>High Quality</h3>
+        <p>Powerful products delivering reliable cleaning results.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Affordable</h3>
+        <p>Excellent prices without compromising quality.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>Delivery Available</h3>
+        <p>Convenient delivery depending on your location.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🏢</div>
+        <h3>Bulk Orders</h3>
+        <p>Perfect for businesses and cleaning companies.</p>
+      </div>
+
+    </div>
+
   </section>
 
+
+  <!-- PRICE LIST -->
+  <section class="pricing-section" id="pricing">
+
+    <div class="section-heading">
+      <p>PRICE LIST</p>
+      <h2>Current Pricing</h2>
+    </div>
+
+    <div class="pricing-table">
+
+      <div class="pricing-row pricing-header">
+        <span>Product</span>
+        <span>Price</span>
+      </div>
+
+      <div class="pricing-row"><span>Dishwasher</span><span>R70</span></div>
+      <div class="pricing-row"><span>Sta-Soft</span><span>R70</span></div>
+      <div class="pricing-row"><span>Jik</span><span>R70</span></div>
+      <div class="pricing-row"><span>All Purpose</span><span>R70</span></div>
+      <div class="pricing-row"><span>Laundry Liquid</span><span>R85</span></div>
+      <div class="pricing-row"><span>Handy Andy</span><span>R70</span></div>
+      <div class="pricing-row"><span>Thick Bleach</span><span>R70</span></div>
+      <div class="pricing-row"><span>Lavender</span><span>R70</span></div>
+      <div class="pricing-row"><span>Vanish Spot Remover</span><span>R85</span></div>
+      <div class="pricing-row"><span>Washing Powder (5L)</span><span>R85</span></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+
+    <h2>Ready To Place Your Order?</h2>
+
+    <p>
+      Contact Amy directly on WhatsApp for quick assistance.
+    </p>
+
+    <a href="https://wa.me/27636119934" target="_blank">
+      WhatsApp Amy
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 PureBright Cleaning Solutions</p>
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
